@@ -5,6 +5,7 @@
 \usepackage{ifthen}
 \usepackage[landscape]{geometry}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage[]{algorithm2e}
 
 \newcommand{\myclass}{15-XXX}
 \newcommand{\myname}{Andrew Carnegie}
@@ -31,12 +32,45 @@
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
-\newcommand{\R}{\mathbb{R}}
+
 \makeatother
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus 0.5ex}
 % -----------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% PnC commands
+\newcommand{\E}[1]{\mathbb{E}\left[#1\right]}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Var}[1]{\text{\textbf{Var}}\left(#1\right)}
+\newcommand{\Bernoulli}{\text{Bernoulli}}
+\newcommand{\Geom}{\text{Geom}}
+\newcommand{\Poisson}{\text{Poisson}}
+\newcommand{\Binomial}{\text{Binomial}}
+\newcommand{\given}{\,|\,}
+\newcommand{\Prr}[1]{\Pr\left\{#1\right\}}
+\newcommand{\Paren}[1]{\left(#1\right)}
+\newcommand{\Set}[1]{\left\{#1\right\}}
+\newcommand{\pmf}[2]{p_{#1}(#2)}
+\newcommand{\absol}[1]{\left|#1\right|}
+\newcommand{\induct}[7]{
+  \begin{proof}[Proof by #1]\,
+
+    \textbf{Theorem: }#2
+    \begin{itemize}
+      \item \textbf{Base cases}: #3
+      \item \textbf{Induction step}: #4
+      
+      \emph{Induction hypothesis}: #5
+
+      \emph{Want to show}: #6
+
+      \emph{Showing}: #7
+    \end{itemize}
+  \end{proof}
+}
+\newcommand{\forcond}{$i=0$ \KwTo $n$}
 
 \title{\filenam}
 
